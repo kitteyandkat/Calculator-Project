@@ -7,7 +7,7 @@ let calculate = (n1, operator, n2) => {
   let result = ''
   if (operator === 'add') {
     result = parseFloat(n1) + parseFloat(n2)
-  } else if (operator === 'subtract') {
+  } else if (operator === 'minus') {
     result = parseFloat(n1) - parseFloat(n2)
   } else if (operator === 'multiply') {
     result = parseFloat(n1) * parseFloat(n2)
@@ -44,7 +44,7 @@ calcButtons.addEventListener('click', e => {
 
     if (
       action === 'add' ||
-      action === 'subtract' ||
+      action === 'minus' ||
       action === 'multiply' ||
       action === 'divide'
     ) {
@@ -55,7 +55,7 @@ calcButtons.addEventListener('click', e => {
     }
 
     if (action === 'clear') {
-      console.log('clear key!')
+      inputWindow.textContent = ''
     }
 
     if (action === 'calculate') {
