@@ -28,7 +28,7 @@ calcButtons.addEventListener('click', e => {
     let previousKeyType = calculator.dataset.previousKeyType
 
     Array.from(key.parentNode.children)
-      .forEach(k => k.classList.remove('is-depressed'))
+      .forEach(k => k.classList.remove('pushedButton'))
 
     if (!action) {
       if (inputWindowNum === '0' || previousKeyType === 'operator') {
@@ -48,7 +48,7 @@ calcButtons.addEventListener('click', e => {
       action === 'multiply' ||
       action === 'divide'
     ) {
-      key.classList.add('is-depressed')
+      key.classList.add('pushedButton')
       calculator.dataset.previousKeyType = 'operator'
       calculator.dataset.firstValue = inputWindowNum
       calculator.dataset.operator = action
@@ -67,3 +67,4 @@ calcButtons.addEventListener('click', e => {
     }
   }
 })
+
