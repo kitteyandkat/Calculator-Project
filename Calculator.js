@@ -2,10 +2,48 @@ let calculator = document.querySelector('.calcBody')
 let calcButtons = document.querySelector('.calcButtons')
 let inputWindow = document.querySelector('.inputWindow')
 
-
-let calculate = (n1, operator, n2) => {
-  let result = ''
-  if (operator === 'add') {
+// 4-4
+// 2+(2*4)
+let calculate = (input) => {
+  // if the input does not contain an operator
+  if (
+    !input.includes('+') &&
+    !input.includes('-') &&
+    !input.includes('*') &&
+    !input.includes('/')
+  ) {
+    return input
+    // so it doesn't loop forever and brick my computer
+    // PEMDAS but lowkey fogetting PE for now
+    // if split only has 1 element, there's is nothing to be added
+  }
+  let split = inputWindow.textContent.split('+');
+  if (split.length !== 1) {
+    let firstValue = split[0]
+    let secondValue = split[1]
+    input = parseFloat(firstValue) + parseFloat(secondValue);
+  }
+  split = inputWindow.textContent.split('-');
+  if (split.length !== 1) {
+    let firstValue = split[0]
+    let secondValue = split[1]
+    input = parseFloat(firstValue) - parseFloat(secondValue);
+  }
+  split = inputWindow.textContent.split('/');
+  if (split.length !== 1) {
+    let firstValue = split[0]
+    let secondValue = split[1]
+    input = parseFloat(firstValue) / parseFloat(secondValue);
+  }
+  split = inputWindow.textContent.split('*');
+  if (split.length !== 1) {
+    let firstValue = split[0]
+    let secondValue = split[1]
+    input = parseFloat(firstValue) * parseFloat(secondValue);
+  }
+  // now i have to replace the first instance of operation 
+  
+  /*if (operator === 'add') {
     result = parseFloat(n1) + parseFloat(n2)
   } else if (operator === 'minus') {
     result = parseFloat(n1) - parseFloat(n2)
@@ -13,9 +51,9 @@ let calculate = (n1, operator, n2) => {
     result = parseFloat(n1) * parseFloat(n2)
   } else if (operator === 'divide') {
     result = parseFloat(n1) / parseFloat(n2)
-  }
+  }*/
 
-  return result
+  return calculate(input.toString())
 }
 
 
@@ -58,12 +96,18 @@ calcButtons.addEventListener('click', e => {
       inputWindow.textContent = ''
     }
 
-    if (action === 'calculate') {
-      let firstValue = calculator.dataset.firstValue
-      let operator = calculator.dataset.operator
-      let secondValue = inputWindowNum
+    if (action === 'equals') {
+      // let firstValue = calculator.dataset.firstValue
+      // let operator = calculator.dataset.operator
+      // let secondValue = inputWindowNum
+      // 1+1
+      // 10+1
+      // 1+10
+      // 2+2+2
 
-      inputWindow.textContent = calculate(firstValue, operator, secondValue)
+
+
+      inputWindow.textContent = calculate(inputWindow.textContent)
     }
   }
 })
