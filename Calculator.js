@@ -1,5 +1,6 @@
 /* Left to work on 
 - Simplify output to only display certain number of digits
+  - .toFixed to only show significant digits
 - Clear window unless operator is pressed, then compound
 - PEMDAS Functionality
   - Add Parenthesis button
@@ -33,7 +34,7 @@ let clearWindow = false
     if (split.length !== 1) {
       let firstValue = split[0]
       let secondValue = split[1]
-      let newValue = parseFloat(firstValue) + parseFloat(secondValue) + '';
+      let newValue = parseFloat((parseFloat(firstValue) + parseFloat(secondValue)).toFixed(10)).toString();
       //This is a method, that replaces the old value, with the calculated value
       input = input.replace(`${firstValue}+${secondValue}`, newValue)
     }
@@ -41,7 +42,7 @@ let clearWindow = false
     if (split.length !== 1) {
       let firstValue = split[0]
       let secondValue = split[1]
-      let newValue = parseFloat(firstValue) - parseFloat(secondValue) + '';
+      let newValue = parseFloat((parseFloat(firstValue) - parseFloat(secondValue)).toFixed(10)).toString();
       //This is a method, that replaces the old value, with the calculated value
       input = input.replace(`${firstValue}-${secondValue}`, newValue)
     }
@@ -49,7 +50,7 @@ let clearWindow = false
     if (split.length !== 1) {
       let firstValue = split[0]
       let secondValue = split[1]
-      let newValue = parseFloat(firstValue) / parseFloat(secondValue) + '';
+      let newValue = parseFloat((parseFloat(firstValue) / parseFloat(secondValue)).toFixed(10)).toString();
       //This is a method, that replaces the old value, with the calculated value
       input = input.replace(`${firstValue}/${secondValue}`, newValue)
     }
@@ -57,7 +58,7 @@ let clearWindow = false
     if (split.length !== 1) {
       let firstValue = split[0]
       let secondValue = split[1]
-      let newValue = parseFloat(firstValue) * parseFloat(secondValue) + '';
+      let newValue = parseFloat((parseFloat(firstValue) * parseFloat(secondValue)).toFixed(10)).toString();
       //This is a method, that replaces the old value, with the calculated value
       input = input.replace(`${firstValue}*${secondValue}`, newValue)
     }
