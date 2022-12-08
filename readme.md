@@ -14,6 +14,9 @@ This is my calculator I'm building along with SEV9
 
   #PMVP
   *Post Minimum Viable Product*
+  -Functionality
+    - Compounding equations
+    - Recognizing PEMDAS
 
   # Wireframes
   ![calculator](Calculator.png)
