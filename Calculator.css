@@ -1,10 +1,21 @@
 
-.calcButtons{
+  .main-container{
+    width: 321px;
+    height: 495px;
+    margin-top: 10%;
+    margin-left: 30%;
+    border-radius: 5%;
+  }
+  .calcButtons{
+  background-color: rgba(111, 110, 110, 0.87);
   display:grid;
   grid-template-columns: repeat(4, 80px);
   grid-template-rows: repeat(5, 80px);
-  padding: 5px,;
+  padding: 5px,; 
+  height: 403px;
+  border-radius: 15px;
 }
+
 
 .decimal{
   margin-left: 80px;
@@ -40,9 +51,21 @@
   border-radius: 10px;
   border-style: solid; 
   border-color: rgba(87, 85, 85, 0.725);
+  /* border-color: rgba(240, 236, 236, 0.725); */
   font-size: 75px;
   justify-content: end;
   color: rgb(42, 45, 84);
   
 }
 
+button{
+  border-radius: 10px;
+}
+
+button:hover{
+background-color: rgb(203, 203, 208);
+}
+
+button:active{
+  background-color: rgba(19, 5, 66, 0.422);
+}
