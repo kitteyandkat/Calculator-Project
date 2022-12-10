@@ -114,12 +114,23 @@ calcButtons.addEventListener('click', e => {
         inputWindow.textContent = inputWindow.textContent + keyContent
       }
     }
-
+    
     if (action === 'decimal') {
       inputWindow.textContent += '.'
     }
-
+    
     // multiply input by -1 to get +/-
+    // if (action === 'negative') {
+    //   console.log('negative button!')
+    //   inputWindow.textContent = input *-1
+    // }
+   
+    // //percentage functionalty 
+    // if (action === 'percent') {
+    //   console.log('percent')
+    //   inputWindow.textContent = input/100 
+    // }
+
     
     if (
       action === 'add' ||
@@ -129,18 +140,14 @@ calcButtons.addEventListener('click', e => {
       ) {
         key.classList.add('pushedButton')
         calculator.dataset.previousKeyType = 'operator'
-        calculator.dataset.firstValue = inputWindowNum
+        // calculator.dataset.firstValue = inputWindowNum
         calculator.dataset.operator = action
       }
       
       if (action === 'clear') {
         inputWindow.textContent = ''
       }
-      
-      if (action === 'negative') {
-        console.log('negative button!')
-        inputWindow.textContent * -1
-      }
+
 
     if (action === 'equals') {
       // let firstValue = calculator.dataset.firstValue

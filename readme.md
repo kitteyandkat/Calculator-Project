@@ -9,12 +9,14 @@ This is my calculator I'm building along with SEV9
   -Add
   -Subtract
   -Multiply
-  -Divide
-  - Clear
+  - Divide
 
   #PMVP
   *Post Minimum Viable Product*
   -Functionality
+    - Clear
+    - +/- Button
+    - Percentage calculation
     - Compounding equations
     - Recognizing PEMDAS
 

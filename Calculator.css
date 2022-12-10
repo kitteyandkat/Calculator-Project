@@ -28,11 +28,43 @@
   margin-left: 80px;
   width: 80px;
   padding:5px;
+  color: blueviolet;
+  font-size: 20px;
 }
 
 .zero{
   height: 80px;
   width: 160px;
+}
+
+.negative{
+  color: blueviolet;
+  font-size: 20px;
+}
+
+.clear{
+  color: blueviolet;
+}
+.percent{
+  color: blueviolet;
+  font-size: 20px;
+}
+.divide{
+  color: blueviolet;
+  font-size: 20px;
+}
+.multiply{
+  color: blueviolet;
+  font-size: 30px;
+  text-align: center;
+}
+.minus{
+  color: blueviolet;
+  font-size: 20px;
+}
+.add{
+  color: blueviolet;
+  font-size: 20px;
 }
 /* .operators{
   display:grid;
