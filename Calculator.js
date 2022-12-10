@@ -8,9 +8,10 @@
   -̶ A̶r̶i̶t̶h̶m̶e̶t̶i̶c̶ w̶i̶t̶h̶ n̶e̶g̶a̶t̶i̶v̶e̶ n̶u̶m̶b̶e̶r̶s̶
   -̶ +̶/̶-̶ b̶u̶t̶t̶o̶n̶ f̶u̶n̶c̶t̶i̶o̶n̶a̶l̶i̶t̶y̶
   - Arithmetic after +/- button
+    -&&
 - P̶e̶r̶c̶e̶n̶t̶a̶g̶e̶ f̶u̶n̶c̶t̶i̶o̶n̶
-- Can only press operator once
--Keyboard functionality
+- Can only press operator once before number (!++)
+-̶K̶e̶y̶b̶o̶a̶r̶d̶ f̶u̶n̶c̶t̶i̶o̶n̶a̶l̶i̶t̶y̶
 */
 
 let calculator = document.querySelector('.calcBody')
@@ -115,39 +116,39 @@ calcButtons.addEventListener('click', e => {
         inputWindow.textContent = inputWindow.textContent + keyContent
       }
     }
-    
+
     if (action === 'decimal') {
       inputWindow.textContent += '.'
     }
-    
+
     // multiply input by -1 to get +/-
     if (action === 'negative') {
       console.log('negative button!')
-      inputWindow.textContent = inputWindow.textContent *-1
+      inputWindow.textContent = inputWindow.textContent * -1
     }
-   
+
     //percentage functionalty 
     if (action === 'percent') {
       console.log('percent')
-      inputWindow.textContent = inputWindow.textContent/100 
+      inputWindow.textContent = inputWindow.textContent / 100
     }
 
-    
+
     if (
       action === 'add' ||
       action === 'minus' ||
       action === 'multiply' ||
       action === 'divide'
-      ) {
-        key.classList.add('pushedButton')
-        calculator.dataset.previousKeyType = 'operator'
-        // calculator.dataset.firstValue = inputWindowNum
-        calculator.dataset.operator = action
-      }
-      
-      if (action === 'clear') {
-        inputWindow.textContent = ''
-      }
+    ) {
+      key.classList.add('pushedButton')
+      calculator.dataset.previousKeyType = 'operator'
+      // calculator.dataset.firstValue = inputWindowNum
+      calculator.dataset.operator = action
+    }
+
+    if (action === 'clear') {
+      inputWindow.textContent = ''
+    }
 
 
     if (action === 'equals') {
@@ -172,3 +173,49 @@ calcButtons.addEventListener('click', e => {
     }
   }
 })
+
+document.addEventListener('keyup', function (event) {
+  console.log(event.key)
+  if (!isNaN(event.key)) {
+    console.log(event.key)
+    inputWindow.textContent += event.key;
+  }
+
+
+  if (event.key === '/') {
+    inputWindow.textContent += event.key;
+  }
+  if (event.key === '-') {
+    inputWindow.textContent += event.key;
+  }
+  if (event.key === '*') {
+    inputWindow.textContent += event.key;
+  }
+  if (event.key === '+') {
+    inputWindow.textContent += event.key;
+  }
+  if (event.key === '%') {
+    inputWindow.textContent = inputWindow.textContent / 100
+  }
+
+  // if(event.key === event.shiftKey + "=" ){
+  //   inputWindow.textContent += "+";
+  // }
+  // if(event.shiftKey && event.key === '8'){
+  //   inputWindow.textContent += '*';
+  // }
+  if (event.key === "Backspace") {
+    inputWindow.textContent = inputWindow.textContent.slice(0, - 1);
+  }
+  if (
+    event.key === 'c' ||
+    event.key === "C") {
+    inputWindow.textContent = ''
+  }
+  if (
+    event.key === 'Enter' ||
+    event.key === "=") {
+    inputWindow.textContent = calculate(inputWindow.textContent)
+  }
+
+});
