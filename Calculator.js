@@ -120,16 +120,16 @@ calcButtons.addEventListener('click', e => {
     }
     
     // multiply input by -1 to get +/-
-    // if (action === 'negative') {
-    //   console.log('negative button!')
-    //   inputWindow.textContent = input *-1
-    // }
+    if (action === 'negative') {
+      console.log('negative button!')
+      inputWindow.textContent = inputWindow.textContent *-1
+    }
    
-    // //percentage functionalty 
-    // if (action === 'percent') {
-    //   console.log('percent')
-    //   inputWindow.textContent = input/100 
-    // }
+    //percentage functionalty 
+    if (action === 'percent') {
+      console.log('percent')
+      inputWindow.textContent = inputWindow.textContent/100 
+    }
 
     
     if (
