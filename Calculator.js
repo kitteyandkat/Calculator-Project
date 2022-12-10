@@ -6,8 +6,9 @@
   - Add Parenthesis button
 - Negative Number Functionality
   -̶ A̶r̶i̶t̶h̶m̶e̶t̶i̶c̶ w̶i̶t̶h̶ n̶e̶g̶a̶t̶i̶v̶e̶ n̶u̶m̶b̶e̶r̶s̶
-  - +/- button functionality
-- Percentage function
+  -̶ +̶/̶-̶ b̶u̶t̶t̶o̶n̶ f̶u̶n̶c̶t̶i̶o̶n̶a̶l̶i̶t̶y̶
+  - Arithmetic after +/- button
+- P̶e̶r̶c̶e̶n̶t̶a̶g̶e̶ f̶u̶n̶c̶t̶i̶o̶n̶
 - Can only press operator once
 -Keyboard functionality
 */
