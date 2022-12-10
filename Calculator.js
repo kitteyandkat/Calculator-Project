@@ -12,6 +12,7 @@
 - P̶e̶r̶c̶e̶n̶t̶a̶g̶e̶ f̶u̶n̶c̶t̶i̶o̶n̶
 - Can only press operator once before number (!++)
 -̶K̶e̶y̶b̶o̶a̶r̶d̶ f̶u̶n̶c̶t̶i̶o̶n̶a̶l̶i̶t̶y̶
+- Minor webnetwork of projects
 */
 
 let calculator = document.querySelector('.calcBody')
